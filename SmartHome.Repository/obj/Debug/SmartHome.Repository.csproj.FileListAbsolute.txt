@@ -1,0 +1,5 @@
+C:\Users\Tony.z.Ma\Source\Repos\SmartHomeService5\RESTService\SmartHome.Repository\bin\Debug\SmartHome.Repository.dll
+C:\Users\Tony.z.Ma\Source\Repos\SmartHomeService5\RESTService\SmartHome.Repository\bin\Debug\SmartHome.Repository.pdb
+C:\Users\Tony.z.Ma\Source\Repos\SmartHomeService5\RESTService\SmartHome.Repository\obj\Debug\SmartHome.Repository.csprojResolveAssemblyReference.cache
+C:\Users\Tony.z.Ma\Source\Repos\SmartHomeService5\RESTService\SmartHome.Repository\obj\Debug\SmartHome.Repository.dll
+C:\Users\Tony.z.Ma\Source\Repos\SmartHomeService5\RESTService\SmartHome.Repository\obj\Debug\SmartHome.Repository.pdb
