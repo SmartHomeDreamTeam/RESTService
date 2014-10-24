@@ -6,13 +6,6 @@
     $(document).ready(function () {
         $("#button").click(function (e) {
             var formdata = $('#SessionForm').serialize();
-/*            $.ajax({
-                url: http://localhost:3474/api/GarageDoorREST
-                DataType: JSON
-                data: formdata
-            }).done(function(){alert("ajax done")})
-              .fail(function(){alert("ajax failed")});
-              */
             $.ajax({
                 url: 'http://localhost:3474/api/GarageDoorREST',
                 type: 'GET',
@@ -20,8 +13,8 @@
                 data: formdata,
                 success: function (data, textStatus, xhr) {
                     if (textStatus == 'success') {
-                        alert(data.SessionID + '  ' + data.SecretKey);
-                        RefreshMain(data.SessionID, data.SecretKey);
+                        Log(data.SessionID, data.SecretKey);
+                        SaveSession(data.SessionID, data.SecretKey);
                     } else {
                         alert('data error')
                     }
@@ -34,25 +27,56 @@
             e.preventDefault();
         });
 
-        function RefreshMain(sessionID, secretKey)
-        {
-            alert('RefreshMain')
+
+        $("#sendRequest").click(function (e) {
             $.ajax({
-                url: 'http://localhost:3474/Home/RequestSession',
-                type: 'POST',
-                datatype: 'JSON',
-                data: {SessionID: sessionID, SecretKey: secretKey},
+                url: 'http://localhost:3474/Home/GenerateRequest',
+                type: 'GET',
+                dataType: 'JSON',
                 success: function (data, textStatus, xhr) {
                     if (textStatus == 'success') {
-                        alert(data.Hash);
+                        LogRequest(data)
                     } else {
-                        alert('Refresh data error')
+                        alert('data error')
                     }
                 },
-                error: function(xhr, textStatus, errorThrown) {
-                    alert('Refresh ajax error')
+                error: function (xhr, textStatus, errorThrown) {
+                    alert('ajax error')
                 }
+            });
+
+            e.preventDefault();
         });
+
+        function SaveSession(sessionID, secretKey)
+        {
+            $.ajax({
+                url: 'http://localhost:3474/Home/RequestSession',
+                type: 'GET',
+                dataType: 'JSON',
+                data: {sessionID: sessionID, secretKey: secretKey},
+                success: function (data, textStatus, xhr) {
+                    if (textStatus == 'success') {
+                    } else {
+                        alert('data error')
+                    }
+                },
+                error: function (xhr, textStatus, errorThrown) {
+                    alert('ajax error')
+                }
+            });
+
+
+        }
+
+        function LogRequest(content)
+        {
+            $('#DisplayResult').append("<p>"+ content + "</p>")
+        }
+
+        function Log(sessionID, secretKey)
+        {
+            $('#DisplayResult').append("<p>Log on:  SessionID: " + sessionID + "  SecretKey: " + secretKey + "</p>" )
         }
 
     });
@@ -71,11 +95,11 @@
             @Html.Label("column2")
             @Html.Password("pin")
 
-            <p>@ViewBag.SessionID</p>
-            <p>@ViewBag.SecretKey</p>
             <input type="button" value="Logon" id="button">
             <input type="button" value="Send Request" id="sendRequest">
        }
+    </div>
+    <div id='DisplayResult'>
     </div>
 </div>
 <div class="row">

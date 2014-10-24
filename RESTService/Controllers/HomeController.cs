@@ -24,15 +24,15 @@ namespace RESTService.Controllers
             return View();
         }
 
-        public JsonResult RequestSession(string sessionID,string secretKey)
+        public ActionResult RequestSession(string sessionID,string secretKey)
         {
             var viewModel = new IndexViewModel() {SessionID = sessionID, SecretKey = secretKey, UserID = "userid", Pin ="1234"};
             viewModel.Hash = HashMD5.GetMd5Hash(viewModel.Pin + viewModel.SecretKey);
             Session["Request"] = viewModel;
-            return Json(viewModel);
+            return new EmptyResult();
         }
 
-        public JsonResult SendRequest()
+        public JsonResult GenerateRequest()
         {
             if (Session["Request"] != null)
             {

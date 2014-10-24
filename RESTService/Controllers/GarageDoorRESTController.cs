@@ -6,12 +6,15 @@ using System.Net.Http;
 using System.Web.Http;
 using SmartHome.ViewModel;
 using SmartHome.Repository;
+using System.Diagnostics;
+
 
 namespace RESTService.Controllers
 {
     public class GarageDoorRESTController : ApiController
     {
-        private string filename = AppDomain.CurrentDomain.BaseDirectory + "App_Data\\" + "Runtime\\" + "session.txt";
+        //C:\Source\Repos\RESTService\RESTService\App_Data\session.txt
+        private string filename = AppDomain.CurrentDomain.BaseDirectory + "App_Data\\" + "session.txt";
 
         // GET api/<controller>
         public IEnumerable<string> Get()
@@ -23,7 +26,11 @@ namespace RESTService.Controllers
         public Security Get(string userid, string pin)
         {
             if (userid == "userid" && pin == "1234")
-                return new Security { SessionID = "23232455654", SecretKey = Guid.NewGuid().ToString() };
+            {
+                var secretkey = Guid.NewGuid().ToString();
+                WriteToFile(pin + secretkey);
+                return new Security { SessionID = "23232455654", SecretKey = secretkey };
+            }
 
             return new Security();
         }
@@ -45,7 +52,7 @@ namespace RESTService.Controllers
 
         private void WriteToFile(string fileContents)
         {
-            var sw = new System.IO.StreamWriter(filename, true);
+            var sw = new System.IO.StreamWriter(filename, false);
             sw.WriteLine(fileContents);
             sw.Close();
         }
