@@ -3,3 +3,8 @@ C:\Users\Tony.z.Ma\Source\Repos\SmartHomeService5\RESTService\SmartHome.ViewMode
 C:\Users\Tony.z.Ma\Source\Repos\SmartHomeService5\RESTService\SmartHome.ViewModel\obj\Debug\SmartHome.ViewModel.csprojResolveAssemblyReference.cache
 C:\Users\Tony.z.Ma\Source\Repos\SmartHomeService5\RESTService\SmartHome.ViewModel\obj\Debug\SmartHome.ViewModel.dll
 C:\Users\Tony.z.Ma\Source\Repos\SmartHomeService5\RESTService\SmartHome.ViewModel\obj\Debug\SmartHome.ViewModel.pdb
+F:\SmartHomeDreamTeam\RESTService\SmartHome.ViewModel\bin\Debug\SmartHome.ViewModel.dll
+F:\SmartHomeDreamTeam\RESTService\SmartHome.ViewModel\bin\Debug\SmartHome.ViewModel.pdb
+F:\SmartHomeDreamTeam\RESTService\SmartHome.ViewModel\obj\Debug\SmartHome.ViewModel.csprojResolveAssemblyReference.cache
+F:\SmartHomeDreamTeam\RESTService\SmartHome.ViewModel\obj\Debug\SmartHome.ViewModel.dll
+F:\SmartHomeDreamTeam\RESTService\SmartHome.ViewModel\obj\Debug\SmartHome.ViewModel.pdb
