@@ -24,15 +24,29 @@ namespace RESTService.Controllers
             return View();
         }
 
-        public JsonResult RequestSession(string sessionID,string secretKey)
+        public JsonResult RequestSession(string sessionID, string secretKey)
         {
             var viewModel = new IndexViewModel() {SessionID = sessionID, SecretKey = secretKey, UserID = "userid", Pin ="1234"};
             viewModel.Hash = HashMD5.GetMd5Hash(viewModel.Pin + viewModel.SecretKey);
             Session["Request"] = viewModel;
-            return Json(viewModel);
+            return Json(string.Empty, JsonRequestBehavior.AllowGet);
         }
 
-        public JsonResult SendRequest()
+        public JsonResult UpdateNewKey(string secretKey)
+        {
+            if (Session["Request"] != null)
+            {
+                var viewModel = Session["Request"] as IndexViewModel;
+                var sessionid = viewModel.SessionID;
+                var pin = viewModel.Pin;
+                viewModel.SecretKey = secretKey;
+                viewModel.Hash = HashMD5.GetMd5Hash(viewModel.Pin + secretKey);
+                Session["Request"] = viewModel;
+            }
+            return Json(string.Empty, JsonRequestBehavior.AllowGet);
+        }
+
+        public JsonResult GenerateRequest()
         {
             if (Session["Request"] != null)
             {
@@ -44,9 +58,10 @@ namespace RESTService.Controllers
                 result.Add("userid", userid);
                 result.Add("sessionid", sessionid);
                 result.Add("hash", hash);
-                return Json(result);
+                var requestString = string.Format("UserID={0}&SessionID={1}&Hash={2}", viewModel.UserID, viewModel.SessionID, viewModel.Hash);
+                return Json(requestString, JsonRequestBehavior.AllowGet);
             }
-            return Json(string.Empty);
+            return Json(string.Empty, JsonRequestBehavior.AllowGet);
         }
 
     }
