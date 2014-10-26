@@ -21,8 +21,9 @@ namespace RESTClient
 
         static async Task RunAsync()
         {
-      using (var client = new HttpClient())
+        using (var client = new HttpClient())
             {
+          /*
                 client.BaseAddress = new Uri("http://localhost:9000/");
                 client.DefaultRequestHeaders.Accept.Clear();
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
@@ -31,7 +32,7 @@ namespace RESTClient
                 HttpResponseMessage response = await client.GetAsync("api/products/1");
                 if (response.IsSuccessStatusCode)
                 {
-                    IndexViewModel product = await response.Content.<IndexViewModel>();
+                    IndexViewModel product = await response.Content.ReadAsStringAsync<string>();
                     --Console.WriteLine("{0}\t${1}\t{2}", product.Name, product.Price, product.Category);
                 }
 
@@ -48,8 +49,29 @@ namespace RESTClient
 
                     // HTTP DELETE
                     response = await client.DeleteAsync(gizmoUrl);
-                }
-        }
+               }
+            */
+            client.BaseAddress = new Uri("http://localhost:3474/api/GarageDoorREST");
+            client.DefaultRequestHeaders.Accept.Clear();
+
+            HttpContent requestContent = new StringContent("grant_type=password&username=" + Username + "&password=" + Password, Encoding.UTF8, "application/x-www-form-urlencoded");
+
+            HttpResponseMessage responseMessage = await client.PostAsync("Token", requestContent);
+
+            if (responseMessage.IsSuccessStatusCode)
+            {
+                string jsonMessage;
+                using (Stream responseStream = await responseMessage.Content.ReadAsStreamAsync())
+                {
+                    jsonMessage = new StreamReader(responseStream).ReadToEnd();
+                }       
+
+                TokenResponseModel tokenResponse = (TokenResponseModel)JsonConvert.DeserializeObject(jsonMessage, typeof(TokenResponseModel));
+
+                return tokenResponse;
+            }
+
+
 
     }
 }
