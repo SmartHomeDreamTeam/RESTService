@@ -16,7 +16,7 @@ namespace RESTService.Controllers
 
             if (Session["Request"] != null)
             {
-                var viewModel = Session["Request"] as IndexViewModel;
+                var viewModel = Session["Request"] as RequestSession;
                 ViewBag.SessionID = viewModel.SessionID;
                 ViewBag.SecretKey = viewModel.SecretKey;
             }
@@ -26,7 +26,7 @@ namespace RESTService.Controllers
 
         public JsonResult RequestSession(string sessionID, string secretKey)
         {
-            var viewModel = new IndexViewModel() {SessionID = sessionID, SecretKey = secretKey, UserID = "userid", Pin ="1234"};
+            var viewModel = new RequestSession() { SessionID = sessionID, SecretKey = secretKey, UserID = "userid", Pin = "1234" };
             viewModel.Hash = HashMD5.GetMd5Hash(viewModel.Pin + viewModel.SecretKey);
             Session["Request"] = viewModel;
             return Json(string.Empty, JsonRequestBehavior.AllowGet);
@@ -36,7 +36,7 @@ namespace RESTService.Controllers
         {
             if (Session["Request"] != null)
             {
-                var viewModel = Session["Request"] as IndexViewModel;
+                var viewModel = Session["Request"] as RequestSession;
                 var sessionid = viewModel.SessionID;
                 var pin = viewModel.Pin;
                 viewModel.SecretKey = secretKey;
@@ -50,7 +50,7 @@ namespace RESTService.Controllers
         {
             if (Session["Request"] != null)
             {
-                var viewModel = Session["Request"] as IndexViewModel;
+                var viewModel = Session["Request"] as RequestSession;
                 var userid = viewModel.UserID;
                 var sessionid = viewModel.SessionID;
                 var hash = viewModel.Hash;
