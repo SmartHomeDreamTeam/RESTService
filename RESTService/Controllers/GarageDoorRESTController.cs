@@ -63,15 +63,29 @@ namespace RESTService.Controllers
         }
         
         // POST api/<controller>
-        public void Post(Guid id, bool open)
+        public Security Post(string userid, string pin)
         {
-           // var viewModel = new GarageViewModel(){ id = id, Open = open}
+            if (userid == "userid" && pin == "1234")
+            {
+                var secretkey = Guid.NewGuid().ToString();
+                WriteToFile(pin + secretkey);
+                return new Security { SessionID = "23232455654", SecretKey = secretkey };
+            }
 
+            return new Security();
         }
 
       // PUT api/<controller>/5
-        public void Put(int id, [FromBody]string value)
+        public Security Put(string userid, string pin)
         {
+            if (userid == "userid" && pin == "1234")
+            {
+                var secretkey = Guid.NewGuid().ToString();
+                WriteToFile(pin + secretkey);
+                return new Security { SessionID = "23232455654", SecretKey = secretkey };
+            }
+
+            return new Security();
         }
 
         // DELETE api/<controller>/5
