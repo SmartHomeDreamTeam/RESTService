@@ -14,7 +14,8 @@ namespace RESTService.Controllers
     public class GarageDoorRESTController : ApiController
     {
         //C:\Source\Repos\RESTService\RESTService\App_Data\session.txt
-        private string filename = AppDomain.CurrentDomain.BaseDirectory + "App_Data\\" + "session.txt";
+        //private string filename = AppDomain.CurrentDomain.BaseDirectory + "App_Data\\" + "session.txt";
+        private string filename = AppDomain.CurrentDomain.BaseDirectory + "session.txt";
 
         // GET api/<controller>
         public IEnumerable<string> Get()

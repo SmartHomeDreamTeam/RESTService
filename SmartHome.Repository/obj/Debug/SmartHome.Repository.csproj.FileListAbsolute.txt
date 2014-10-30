@@ -12,3 +12,8 @@ F:\SmartHomeDreamTeam\RESTService\SmartHome.Repository\bin\Debug\SmartHome.Repos
 F:\SmartHomeDreamTeam\RESTService\SmartHome.Repository\bin\Debug\SmartHome.Repository.pdb
 F:\SmartHomeDreamTeam\RESTService\SmartHome.Repository\obj\Debug\SmartHome.Repository.dll
 F:\SmartHomeDreamTeam\RESTService\SmartHome.Repository\obj\Debug\SmartHome.Repository.pdb
+C:\REST\RESTService\SmartHome.Repository\bin\Debug\SmartHome.Repository.dll
+C:\REST\RESTService\SmartHome.Repository\bin\Debug\SmartHome.Repository.pdb
+C:\REST\RESTService\SmartHome.Repository\obj\Debug\SmartHome.Repository.csprojResolveAssemblyReference.cache
+C:\REST\RESTService\SmartHome.Repository\obj\Debug\SmartHome.Repository.dll
+C:\REST\RESTService\SmartHome.Repository\obj\Debug\SmartHome.Repository.pdb
