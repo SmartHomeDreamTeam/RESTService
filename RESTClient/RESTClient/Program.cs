@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Net.Http;
 using System.Net.Http.Headers;
+using SmartHome.Repository;
 using SmartHome.ViewModel;
 using Newtonsoft.Json;
 
@@ -61,16 +62,18 @@ namespace RESTClient
 
                 //HttpContent requestContent = new StringContent(string.Format("userid={0}&pin={1}", "userid", "1234"), Encoding.UTF8, "application/x-www-form-urlencoded");
 
-                var content = new FormUrlEncodedContent(new[]
-                {
-                    new KeyValuePair<string, string>("userid","userid"),
-                    new KeyValuePair<string, string>("pin", "1234")
-                });
+//                var content = new FormUrlEncodedContent(new[]
+//                {
+//                    new KeyValuePair<string, string>("userid","userid"),
+//                    new KeyValuePair<string, string>("pin", "1234")
+//                });
 
                 HttpResponseMessage responseMessage = await client.GetAsync(string.Format("api/GarageDoorREST?userid={0}&pin={1}", "userid", "1234"));
 
                 // var requestSession = new RequestSession() { UserID = "userid", Pin="pin"};
                 //HttpResponseMessage responseMessage = await client.PutAsync("/api/GarageDoorREST", content);
+
+                var response = new RequestSession();
                 if (responseMessage.IsSuccessStatusCode)
                 {
                     string jsonMessage;
@@ -79,9 +82,23 @@ namespace RESTClient
                         jsonMessage = new StreamReader(responseStream).ReadToEnd();
                     }
 
-                    var response = (RequestSession)JsonConvert.DeserializeObject(jsonMessage, typeof(RequestSession));
+                    response = (RequestSession)JsonConvert.DeserializeObject(jsonMessage, typeof(RequestSession));
 
-                    //return RequestSession;
+                }
+
+                // HTTP POST
+                var gizmo = new RequestSession() {};
+
+                var pinAndKey = "1234" + response.SecretKey;
+                var content = new FormUrlEncodedContent(new[]
+                {
+                    new KeyValuePair<string, string>("userid","userid"),
+                    new KeyValuePair<string, string>("sessionid","23232455654"),
+                    new KeyValuePair<string, string>("hash", HashMD5.GetMd5Hash(pinAndKey))
+                });
+                responseMessage = await client.PostAsync("api/GarageDoorREST", content);  //method not allow
+                if (responseMessage.IsSuccessStatusCode)
+                {
                 }
             }
         }
