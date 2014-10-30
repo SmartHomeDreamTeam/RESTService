@@ -87,7 +87,7 @@ namespace RESTClient
                 }
 
                 // HTTP POST
-                var gizmo = new RequestSession() {};
+                //var gizmo = new RequestSession() {};
 
                 var pinAndKey = "1234" + response.SecretKey;
                 var content = new FormUrlEncodedContent(new[]
