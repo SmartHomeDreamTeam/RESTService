@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Express 2013 for Web
+# Visual Studio 2013
 VisualStudioVersion = 12.0.30723.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartHome.RESTService", "RESTService\SmartHome.RESTService.csproj", "{E0F5AF1A-AD35-4A06-8CAA-C32D73D0FD07}"
@@ -8,6 +8,11 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartHome.ViewModel", "SmartHome.ViewModel\SmartHome.ViewModel.csproj", "{C61CA7CF-B88F-4249-9E66-7E0F42A075D6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartHome.Repository", "SmartHome.Repository\SmartHome.Repository.csproj", "{1119A1F5-8267-4927-93D7-FF23A54F8DD9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DB", "DB", "{A50CFAFF-F6DA-4A0A-8159-3FD071DDD8C1}"
+	ProjectSection(SolutionItems) = preProject
+		DB\CreateDB.sql = DB\CreateDB.sql
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
