@@ -7,7 +7,7 @@
         $("#button").click(function (e) {
             var formdata = $('#SessionForm').serialize();
             $.ajax({
-                url: 'http://localhost:3474/api/GarageDoorREST',
+                url: 'http://localhost/SmartHome.RESTService/api/GarageDoorREST',
                 type: 'GET',
                 dataType: 'JSON',
                 data: formdata,
@@ -31,7 +31,7 @@
         $("#sendRequestbutton").click(function (e) {
             // alert('sendRequest button');
             $.ajax({
-                url: 'http://localhost:3474/Home/GenerateRequest',
+                url: 'http://localhost/SmartHome.RESTService/Home/GenerateRequest',
                 type: 'GET',
                 dataType: 'JSON',
                 success: function (data, textStatus, xhr) {
@@ -53,7 +53,7 @@
         function UpdateNewKey(secretKey)
         {
             $.ajax({
-                url: 'http://localhost:3474/Home/UpdateNewKey',
+                url: 'http://localhost/SmartHome.RESTService/Home/UpdateNewKey',
                 type: 'GET',
                 dataType: 'JSON',
                 data: { secretKey: secretKey },
@@ -73,7 +73,7 @@
         {
             //alert('SendRequest function');
             $.ajax({
-                url: 'http://localhost:3474/api/GarageDoorREST',
+                url: 'http://localhost/SmartHome.RESTService/api/GarageDoorREST',
                 type: 'GET',
                 dataType: 'JSON',
                 data: requestdata,
@@ -94,7 +94,7 @@
         function SaveSession(sessionID, secretKey)
         {
             $.ajax({
-                url: 'http://localhost:3474/Home/RequestSession',
+                url: 'http://localhost/SmartHome.RESTService/Home/RequestSession',
                 type: 'GET',
                 dataType: 'JSON',
                 data: {sessionID: sessionID, secretKey: secretKey},
