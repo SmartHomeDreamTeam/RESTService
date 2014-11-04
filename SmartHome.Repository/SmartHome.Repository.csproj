@@ -50,8 +50,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Implementation\LazySessionContext.cs" />
+    <Compile Include="Implementation\NHibernateEntityRepository.cs" />
     <Compile Include="Implementation\NHibernateHelper.cs" />
+    <Compile Include="Implementation\RepositoryQuery.cs" />
+    <Compile Include="Implementation\RepositoryRestriction.cs" />
     <Compile Include="Implementation\UserInforRepository.cs" />
+    <Compile Include="Interface\IEntityRepository.cs" />
+    <Compile Include="Interface\IRepositoryQuery.cs" />
+    <Compile Include="Interface\IRepositoryRestriction.cs" />
     <Compile Include="Interface\IUserInforRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

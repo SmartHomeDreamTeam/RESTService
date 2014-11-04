@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 
 namespace SmartHome.Domain
 {
-    public interface Domain
+    public abstract class Entity
     {
-        Guid ID { get; set; }
+        public Guid ID { get; set; }
     }
 }

@@ -30,6 +30,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="NHibernate">
+      <HintPath>..\ThirdParty\Required_Bins\NHibernate.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -39,8 +42,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Class1.cs" />
     <Compile Include="HashMD5.cs" />
+    <Compile Include="NHibernateService\NHibernateService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RepositoryService\RepositoryService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SmartHome.Domain\SmartHome.Domain.csproj">
+      <Project>{79D5294E-6062-4472-9A80-018661F3C314}</Project>
+      <Name>SmartHome.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SmartHome.Repository\SmartHome.Repository.csproj">
+      <Project>{64D9F19F-96D9-4E12-915B-5785D727FB2F}</Project>
+      <Name>SmartHome.Repository</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SmartHome.Service.Interface\SmartHome.Service.Interface.csproj">
+      <Project>{52E47C31-D97E-4713-947A-1AA384C704B8}</Project>
+      <Name>SmartHome.Service.Interface</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

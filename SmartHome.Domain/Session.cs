@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SmartHome.Domain
 {
-    public class Session : Domain
+    public class Session : Entity
     {
         public virtual Guid ID { get; set; }
 
