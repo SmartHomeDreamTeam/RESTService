@@ -277,10 +277,6 @@
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\SmartHome.Repository\SmartHome.Service.csproj">
-      <Project>{1119a1f5-8267-4927-93d7-ff23a54f8dd9}</Project>
-      <Name>SmartHome.Service</Name>
-    </ProjectReference>
     <ProjectReference Include="..\SmartHome.ViewModel\SmartHome.ViewModel.csproj">
       <Project>{c61ca7cf-b88f-4249-9e66-7e0f42a075d6}</Project>
       <Name>SmartHome.ViewModel</Name>
