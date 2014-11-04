@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="SmartHome"
+                   namespace="SmartHome.Domain">
+
+  <class name="Session">
+    <id name="ID" column ="SessionID">
+      <generator class="guid.comb" />
+    </id>
+    <property name="UserInforID" type="Guid"/>
+    <property name="SecretKey" type="String"/>
+    <property name="CreatedDateTime" type="DateTime"/>
+    <property name="CreatedBy" type="String"/>
+  </class>
+
+</hibernate-mapping>

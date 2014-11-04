@@ -31,6 +31,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Required_Bins", "Required_B
 		ThirdParty\Required_Bins\NHibernate.dll = ThirdParty\Required_Bins\NHibernate.dll
 		ThirdParty\Required_Bins\NHibernate.pdb = ThirdParty\Required_Bins\NHibernate.pdb
 		ThirdParty\Required_Bins\NHibernate.xml = ThirdParty\Required_Bins\NHibernate.xml
+		ThirdParty\Required_Bins\Ninject.dll = ThirdParty\Required_Bins\Ninject.dll
+		ThirdParty\Required_Bins\Ninject.Extensions.Conventions.dll = ThirdParty\Required_Bins\Ninject.Extensions.Conventions.dll
+		ThirdParty\Required_Bins\Ninject.Web.Common.dll = ThirdParty\Required_Bins\Ninject.Web.Common.dll
+		ThirdParty\Required_Bins\Ninject.Web.Mvc.dll = ThirdParty\Required_Bins\Ninject.Web.Mvc.dll
+		ThirdParty\Required_Bins\NSubstitute.dll = ThirdParty\Required_Bins\NSubstitute.dll
+		ThirdParty\Required_Bins\nunit.exe.config = ThirdParty\Required_Bins\nunit.exe.config
+		ThirdParty\Required_Bins\nunit.framework.dll = ThirdParty\Required_Bins\nunit.framework.dll
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartHome.Service.Interface", "SmartHome.Service.Interface\SmartHome.Service.Interface.csproj", "{52E47C31-D97E-4713-947A-1AA384C704B8}"
@@ -38,6 +45,12 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartHome.Service", "SmartHome.Service\SmartHome.Service.csproj", "{1119A1F5-8267-4927-93D7-FF23A54F8DD9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartHome.Repository", "SmartHome.Repository\SmartHome.Repository.csproj", "{64D9F19F-96D9-4E12-915B-5785D727FB2F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartHome.Domain", "SmartHome.Domain\SmartHome.Domain.csproj", "{79D5294E-6062-4472-9A80-018661F3C314}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UnitTest", "UnitTest", "{8811CA57-B5CE-4BCD-960E-E40BF3543963}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartHome.Repository.UnitTest", "SmartHome.Repository.UnitTest\SmartHome.Repository.UnitTest.csproj", "{537CEA80-FC7F-40EE-9888-AE2F69E66F86}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -65,11 +78,20 @@ Global
 		{64D9F19F-96D9-4E12-915B-5785D727FB2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{64D9F19F-96D9-4E12-915B-5785D727FB2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{64D9F19F-96D9-4E12-915B-5785D727FB2F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{79D5294E-6062-4472-9A80-018661F3C314}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{79D5294E-6062-4472-9A80-018661F3C314}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79D5294E-6062-4472-9A80-018661F3C314}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{79D5294E-6062-4472-9A80-018661F3C314}.Release|Any CPU.Build.0 = Release|Any CPU
+		{537CEA80-FC7F-40EE-9888-AE2F69E66F86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{537CEA80-FC7F-40EE-9888-AE2F69E66F86}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{537CEA80-FC7F-40EE-9888-AE2F69E66F86}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{537CEA80-FC7F-40EE-9888-AE2F69E66F86}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{5E639B8D-0C56-446C-BD66-DB81F5053B49} = {00F0585E-38F5-4BAE-982B-DAF3A50F2DE7}
+		{537CEA80-FC7F-40EE-9888-AE2F69E66F86} = {8811CA57-B5CE-4BCD-960E-E40BF3543963}
 	EndGlobalSection
 EndGlobal

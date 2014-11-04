@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="SmartHome"
+                   namespace="SmartHome.Domain">
+
+  <class name="UserInfor">
+    <id name="ID" column ="UserInforID">
+      <generator class="guid.comb" />
+    </id>
+    <property name="UserInforID" type="Guid"/>
+    <property name="Pin" type="String"/>
+  </class>
+
+</hibernate-mapping>

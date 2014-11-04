@@ -5,7 +5,7 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using SmartHome.ViewModel;
-using SmartHome.Repository;
+using SmartHome.Service;
 using System.Diagnostics;
 
 
