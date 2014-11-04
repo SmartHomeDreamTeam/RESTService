@@ -14,29 +14,29 @@ namespace SmartHome.Repository.UnitTest.Mappings
     {
         private ITransaction tx;
         private ISession session;
-        protected NHibernateHelper nHibernateHelper = new NHibernateHelper(new[] { "SmartHome.Repository" });
 
         [TestFixtureSetUp]
         public void TestFixtureSetUp()
         {
+            NHibernateHelper.Initial(new[] {"SmartHome.Repository"});
         }
 
         [TestFixtureTearDown]
         public void TestFixtureTearDown()
         {
-            nHibernateHelper.CloseSession();
+            NHibernateHelper.CloseSession();
         }
 
         [SetUp]
         public void SetUp()
         {
-            nHibernateHelper.BeginTransaction();
+            NHibernateHelper.BeginTransaction();
         }
 
         [TearDown]
         public void TearDown()
         {
-            nHibernateHelper.RollBack();
+            NHibernateHelper.RollBack();
         }
 
     }
