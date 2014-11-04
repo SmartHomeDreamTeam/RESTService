@@ -48,7 +48,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Mappings\nHibernateMappingBase.cs" />
+    <Compile Include="Mappings\nHibernateMappingTestBase.cs" />
     <Compile Include="Mappings\UserInforTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -61,6 +61,9 @@
       <Project>{64d9f19f-96d9-4e12-915b-5785d727fb2f}</Project>
       <Name>SmartHome.Repository</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

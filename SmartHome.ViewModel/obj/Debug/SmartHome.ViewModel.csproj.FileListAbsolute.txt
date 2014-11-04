@@ -20,5 +20,6 @@ C:\REST\RESTService\SmartHome.ViewModel\bin\Debug\SmartHome.ViewModel.dll
 C:\REST\RESTService\SmartHome.ViewModel\bin\Debug\SmartHome.ViewModel.pdb
 C:\REST\RESTService\SmartHome.ViewModel\bin\Debug\Newtonsoft.Json.dll
 C:\REST\RESTService\SmartHome.ViewModel\bin\Debug\Newtonsoft.Json.xml
+C:\REST\RESTService\SmartHome.ViewModel\obj\Debug\SmartHome.ViewModel.csprojResolveAssemblyReference.cache
 C:\REST\RESTService\SmartHome.ViewModel\obj\Debug\SmartHome.ViewModel.dll
 C:\REST\RESTService\SmartHome.ViewModel\obj\Debug\SmartHome.ViewModel.pdb
