@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartHome.RESTService", "RE
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartHome.ViewModel", "SmartHome.ViewModel\SmartHome.ViewModel.csproj", "{C61CA7CF-B88F-4249-9E66-7E0F42A075D6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartHome.Repository", "SmartHome.Repository\SmartHome.Repository.csproj", "{1119A1F5-8267-4927-93D7-FF23A54F8DD9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartHome.Service", "SmartHome.Repository\SmartHome.Service.csproj", "{1119A1F5-8267-4927-93D7-FF23A54F8DD9}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DB", "DB", "{A50CFAFF-F6DA-4A0A-8159-3FD071DDD8C1}"
 	ProjectSection(SolutionItems) = preProject
@@ -35,6 +35,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Required_Bins", "Required_B
 		ThirdParty\Required_Bins\NHibernate.xml = ThirdParty\Required_Bins\NHibernate.xml
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartHome.Service.Interface", "SmartHome.Service.Interface\SmartHome.Service.Interface.csproj", "{52E47C31-D97E-4713-947A-1AA384C704B8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -53,6 +55,10 @@ Global
 		{1119A1F5-8267-4927-93D7-FF23A54F8DD9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1119A1F5-8267-4927-93D7-FF23A54F8DD9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1119A1F5-8267-4927-93D7-FF23A54F8DD9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52E47C31-D97E-4713-947A-1AA384C704B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52E47C31-D97E-4713-947A-1AA384C704B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52E47C31-D97E-4713-947A-1AA384C704B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52E47C31-D97E-4713-947A-1AA384C704B8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
