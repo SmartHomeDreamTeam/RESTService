@@ -33,6 +33,9 @@
     <Reference Include="Iesi.Collections">
       <HintPath>..\ThirdParty\Required_Bins\Iesi.Collections.dll</HintPath>
     </Reference>
+    <Reference Include="LinFu.DynamicProxy">
+      <HintPath>..\ThirdParty\Required_Bins\LinFu.DynamicProxy.dll</HintPath>
+    </Reference>
     <Reference Include="NHibernate">
       <HintPath>..\ThirdParty\Required_Bins\NHibernate.dll</HintPath>
     </Reference>
@@ -46,6 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Implementation\LazySessionContext.cs" />
     <Compile Include="Implementation\NHibernateHelper.cs" />
     <Compile Include="Implementation\UserInforRepository.cs" />
     <Compile Include="Interface\IUserInforRepository.cs" />
@@ -56,7 +60,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <EmbeddedResource Include="Mappings\UserInfor.hbm.xml" />
-    <EmbeddedResource Include="Mappings\Session.hbm.xml" />
+    <EmbeddedResource Include="Mappings\Session.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

@@ -23,6 +23,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Required_Bins", "Required_B
 		ThirdParty\Required_Bins\Iesi.Collections.dll = ThirdParty\Required_Bins\Iesi.Collections.dll
 		ThirdParty\Required_Bins\Iesi.Collections.pdb = ThirdParty\Required_Bins\Iesi.Collections.pdb
 		ThirdParty\Required_Bins\Iesi.Collections.xml = ThirdParty\Required_Bins\Iesi.Collections.xml
+		ThirdParty\Required_Bins\LinFu.DynamicProxy.dll = ThirdParty\Required_Bins\LinFu.DynamicProxy.dll
 		ThirdParty\Required_Bins\Newtonsoft.Json.dll = ThirdParty\Required_Bins\Newtonsoft.Json.dll
 		ThirdParty\Required_Bins\Newtonsoft.Json.pdb = ThirdParty\Required_Bins\Newtonsoft.Json.pdb
 		ThirdParty\Required_Bins\Newtonsoft.Json.xml = ThirdParty\Required_Bins\Newtonsoft.Json.xml

@@ -12,9 +12,9 @@ namespace SmartHome.Domain
 
         public virtual Guid UserInforID { get; set; }
 
-        public virtual string Secretkey { get; set; }
+        public virtual string SecretKey { get; set; }
 
-        public virtual DateTime CreateDateTime { get; set; }
+        public virtual DateTime CreatedDateTime { get; set; }
 
         public virtual string CreatedBy { get; set; }
     }

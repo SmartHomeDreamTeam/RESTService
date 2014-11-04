@@ -272,6 +272,7 @@ C:\REST\RESTService\RESTService\bin\RESTService.pdb
 C:\REST\RESTService\RESTService\bin\Antlr3.Runtime.dll
 C:\REST\RESTService\RESTService\bin\EntityFramework.dll
 C:\REST\RESTService\RESTService\bin\EntityFramework.SqlServer.dll
+C:\REST\RESTService\RESTService\bin\LinFu.DynamicProxy.dll
 C:\REST\RESTService\RESTService\bin\Microsoft.AspNet.Identity.Core.dll
 C:\REST\RESTService\RESTService\bin\Microsoft.AspNet.Identity.EntityFramework.dll
 C:\REST\RESTService\RESTService\bin\Microsoft.AspNet.Identity.Owin.dll
@@ -286,6 +287,7 @@ C:\REST\RESTService\RESTService\bin\Microsoft.Owin.Security.OAuth.dll
 C:\REST\RESTService\RESTService\bin\Microsoft.Owin.Security.Twitter.dll
 C:\REST\RESTService\RESTService\bin\Microsoft.Web.Infrastructure.dll
 C:\REST\RESTService\RESTService\bin\Newtonsoft.Json.dll
+C:\REST\RESTService\RESTService\bin\NHibernate.dll
 C:\REST\RESTService\RESTService\bin\Owin.dll
 C:\REST\RESTService\RESTService\bin\SmartHome.Repository.dll
 C:\REST\RESTService\RESTService\bin\SmartHome.ViewModel.dll
@@ -301,8 +303,11 @@ C:\REST\RESTService\RESTService\bin\System.Web.WebPages.Deployment.dll
 C:\REST\RESTService\RESTService\bin\System.Web.WebPages.dll
 C:\REST\RESTService\RESTService\bin\System.Web.WebPages.Razor.dll
 C:\REST\RESTService\RESTService\bin\WebGrease.dll
+C:\REST\RESTService\RESTService\bin\Iesi.Collections.dll
 C:\REST\RESTService\RESTService\bin\SmartHome.Repository.pdb
 C:\REST\RESTService\RESTService\bin\SmartHome.ViewModel.pdb
+C:\REST\RESTService\RESTService\bin\NHibernate.pdb
+C:\REST\RESTService\RESTService\bin\NHibernate.xml
 C:\REST\RESTService\RESTService\bin\Newtonsoft.Json.xml
 C:\REST\RESTService\RESTService\bin\System.Net.Http.Formatting.xml
 C:\REST\RESTService\RESTService\bin\System.Web.Helpers.xml
@@ -330,6 +335,8 @@ C:\REST\RESTService\RESTService\bin\Microsoft.Owin.Security.Google.xml
 C:\REST\RESTService\RESTService\bin\Microsoft.Owin.Security.Twitter.xml
 C:\REST\RESTService\RESTService\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 C:\REST\RESTService\RESTService\bin\System.Web.Http.Owin.xml
+C:\REST\RESTService\RESTService\bin\Iesi.Collections.pdb
+C:\REST\RESTService\RESTService\bin\Iesi.Collections.xml
 C:\REST\RESTService\RESTService\obj\Debug\SmartHome.RESTService.csprojResolveAssemblyReference.cache
 C:\REST\RESTService\RESTService\obj\Debug\RESTService.dll
 C:\REST\RESTService\RESTService\obj\Debug\RESTService.pdb

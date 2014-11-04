@@ -30,6 +30,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="LinFu.DynamicProxy">
+      <HintPath>..\ThirdParty\Required_Bins\LinFu.DynamicProxy.dll</HintPath>
+    </Reference>
     <Reference Include="NHibernate">
       <HintPath>..\ThirdParty\Required_Bins\NHibernate.dll</HintPath>
     </Reference>
