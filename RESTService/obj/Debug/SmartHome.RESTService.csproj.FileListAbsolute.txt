@@ -266,7 +266,6 @@ F:\SmartHomeDreamTeam\RESTService\RESTService\bin\System.Web.Http.Owin.xml
 F:\SmartHomeDreamTeam\RESTService\RESTService\obj\Debug\SmartHome.RESTService.csprojResolveAssemblyReference.cache
 F:\SmartHomeDreamTeam\RESTService\RESTService\obj\Debug\RESTService.dll
 F:\SmartHomeDreamTeam\RESTService\RESTService\obj\Debug\RESTService.pdb
-C:\REST\RESTService\RESTService\bin\hibernate.cfg.xml
 C:\REST\RESTService\RESTService\bin\RESTService.dll.config
 C:\REST\RESTService\RESTService\bin\RESTService.dll
 C:\REST\RESTService\RESTService\bin\RESTService.pdb
