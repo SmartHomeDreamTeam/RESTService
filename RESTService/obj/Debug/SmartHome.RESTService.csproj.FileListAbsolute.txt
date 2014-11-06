@@ -336,7 +336,6 @@ C:\REST\RESTService\RESTService\bin\Microsoft.Owin.Security.Google.xml
 C:\REST\RESTService\RESTService\bin\Microsoft.Owin.Security.Twitter.xml
 C:\REST\RESTService\RESTService\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 C:\REST\RESTService\RESTService\bin\System.Web.Http.Owin.xml
-C:\REST\RESTService\RESTService\bin\Iesi.Collections.pdb
 C:\REST\RESTService\RESTService\bin\Iesi.Collections.xml
 C:\REST\RESTService\RESTService\obj\Debug\SmartHome.RESTService.csprojResolveAssemblyReference.cache
 C:\REST\RESTService\RESTService\obj\Debug\RESTService.dll
