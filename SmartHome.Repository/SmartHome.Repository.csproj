@@ -51,10 +51,9 @@
   <ItemGroup>
     <Compile Include="Implementation\LazySessionContext.cs" />
     <Compile Include="Implementation\NHibernateHelper.cs" />
+    <Compile Include="Implementation\Repository.cs" />
     <Compile Include="Implementation\UserInforRepository.cs" />
-    <Compile Include="Interface\IEntityRepository.cs" />
-    <Compile Include="Interface\IRepositoryQuery.cs" />
-    <Compile Include="Interface\IRepositoryRestriction.cs" />
+    <Compile Include="Interface\IRepository.cs" />
     <Compile Include="Interface\IUserInforRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -62,7 +61,10 @@
     <Content Include="hibernate.cfg.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <EmbeddedResource Include="Mappings\UserInfor.hbm.xml" />
+    <EmbeddedResource Include="Mappings\EventLog.hbm.xml" />
+    <EmbeddedResource Include="Mappings\UserInfor.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="Mappings\Session.hbm.xml">
       <SubType>Designer</SubType>
     </EmbeddedResource>

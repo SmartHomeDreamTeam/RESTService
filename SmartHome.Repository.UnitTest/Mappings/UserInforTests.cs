@@ -43,7 +43,8 @@ namespace SmartHome.Repository.UnitTest.Mappings
         [Test]
         public void InsertTest()
         {
-            var userInfor = new UserInfor() {ID = new Guid(), Pin = "pin"};
+            var userInfor = new UserInfor() {ID = new Guid(), UserID ="TestUserID", Pin = "pin"};
+            userInfor.Add(new Session(){ CreatedBy = "TestUser", SecretKey = "secretkey", CreatedDateTime = DateTime.Now });
             IUserInforRepository repository = new UserInforRepository();
             repository.Insert(userInfor);
         }

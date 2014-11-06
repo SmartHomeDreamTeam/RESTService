@@ -12,9 +12,6 @@ namespace SmartHome.Repository.UnitTest.Mappings
 {
     public abstract class nHibernateMappingTestBase
     {
-        private ITransaction tx;
-        private ISession session;
-
         [TestFixtureSetUp]
         public void TestFixtureSetUp()
         {

@@ -7,6 +7,13 @@
     <id name="ID" column ="SessionID">
       <generator class="guid.comb" />
     </id>
+
+    <many-to-one
+       name="UserInfor"
+       column="UserInforID"
+       class="SmartHome.Domain.UserInfor, SmartHome.Domain" unique="true"
+    />
+
     <property name="UserInforID" type="Guid"/>
     <property name="SecretKey" type="String"/>
     <property name="CreatedDateTime" type="DateTime"/>

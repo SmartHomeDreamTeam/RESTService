@@ -6,18 +6,15 @@ using System.Threading.Tasks;
 
 namespace SmartHome.Domain
 {
-    public class Session : IEntity
+    public class EventLog : IEntity
     {
         public virtual Guid ID { get; set; }
 
-        public virtual UserInfor UserInfor { get; set; }
-
         public virtual Guid UserInforID { get; set; }
 
-        public virtual string SecretKey { get; set; }
+        public virtual Guid? LogID { get; set; }
 
-        public virtual DateTime CreatedDateTime { get; set; }
+        public virtual string Description { get; set; }
 
-        public virtual string CreatedBy { get; set; }
     }
 }

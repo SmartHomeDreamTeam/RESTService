@@ -8,7 +8,13 @@
     <id name="ID" column ="UserInforID">
       <generator class="guid.comb" />
     </id>
+    <property name="UserID" type="String"/>
     <property name="Pin" type="String"/>
+
+    <bag name="Sessions" table="Session" cascade="all-delete-orphan" inverse="true">
+      <key column="UserInforID" />
+      <one-to-many class="SmartHome.Domain.Session, SmartHome.Domain" />
+    </bag>
   </class>
 
 </hibernate-mapping>
