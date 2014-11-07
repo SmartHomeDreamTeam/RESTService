@@ -16,6 +16,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ThirdParty", "ThirdParty", 
 	ProjectSection(SolutionItems) = preProject
 		ThirdParty\Json60r6.zip = ThirdParty\Json60r6.zip
 		ThirdParty\NHibernate-3.3.3.GA-bin.zip = ThirdParty\NHibernate-3.3.3.GA-bin.zip
+		..\..\..\..\..\RESTService\RESTService\ThirdParty\Ninject-3.0.0.15-release-net-4.5.zip = ..\..\..\..\..\RESTService\RESTService\ThirdParty\Ninject-3.0.0.15-release-net-4.5.zip
+		..\..\..\..\..\RESTService\RESTService\ThirdParty\NUnit-2.6.3.zip = ..\..\..\..\..\RESTService\RESTService\ThirdParty\NUnit-2.6.3.zip
+		..\..\..\..\..\RESTService\RESTService\ThirdParty\SimpleInjector Runtime Library v2.6.0.zip = ..\..\..\..\..\RESTService\RESTService\ThirdParty\SimpleInjector Runtime Library v2.6.0.zip
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Required_Bins", "Required_Bins", "{5E639B8D-0C56-446C-BD66-DB81F5053B49}"
